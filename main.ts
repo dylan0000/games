@@ -36,22 +36,22 @@ scene.onHitTile(SpriteKind.Player, 9, function (sprite2) {
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . f f f f . . . . . . . . . . 
-. . . . . . . . f f 1 1 1 1 f f . . . . . . . . 
-. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
-. . . . . . . f 1 1 1 1 1 1 1 1 f . . . . . . . 
-. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
-. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
-. . . . . . f d d d 1 1 1 1 d d d f . . . . . . 
-. . . . . . f b d b f d d f b d b f . . . . . . 
-. . . . . . f c d c f 1 1 f c d c f . . . . . . 
-. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
-. . . . . . f f f c d b 1 b d f f f f . . . . . 
-. . . . f c 1 1 1 c b f b f c 1 1 1 c f . . . . 
-. . . . f 1 b 1 b 1 f f f f 1 b 1 b 1 f . . . . 
-. . . . f b f b f f f f f f b f b f b f . . . . 
-. . . . . . . . . f f f f f f . . . . . . . . . 
-. . . . . . . . . . . f f f . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . f . . . . . . . f . . . . . . 
+. . . . . . . . f f f f f f f f f f f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 f 2 2 2 f 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 f f f 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f f f f f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -62,22 +62,22 @@ scene.onHitTile(SpriteKind.Player, 9, function (sprite2) {
             scene.place(value, enemyghost)
         }
         scene.setTile(9, img`
-b d d d d d d d d d d d d d d c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-c c c c c c c c c c c c c c c a 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+c c c c c c c c c c c c c c c c 
 `, false)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(39, 18))
     }
@@ -125,22 +125,22 @@ b b b b b b b b b b b b b b b b
 b b b b b b b b b b b b b b b b 
 `, false)
         scene.setTile(9, img`
-b d d d d d d d d d d d d d d c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-c c c c c c c c c c c c c c c a 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+c c c c c c c c c c c c c c c c 
 `, false)
     }
 }
@@ -173,22 +173,22 @@ scene.onHitWall(SpriteKind.boss, function (sprite2) {
 scene.onHitTile(SpriteKind.Projectile, 4, function (sprite2) {
     if (level == 2) {
         scene.setTile(4, img`
-b d d d d d d d d d d d d d d c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-d b b b b b b b b b b b b b b c 
-c c c c c c c c c c c c c c c a 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+b b b b b b b b b b b b b b b c 
+c c c c c c c c c c c c c c c c 
 `, false)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(46, 56))
     }
@@ -684,7 +684,7 @@ function levels () {
         game.splash("tutorial")
         game.splash("Controls", "Keyboard X to rotate direction")
         game.splash("Space bar to shoot", "Arrow keys to move")
-        game.splash("shoot buttons to activiate", "also collect ammo too")
+        game.splash("shoot to activate buttons", "ammo displayed bottom right")
         sprite()
         scene.setTileMap(img`
 f f f f f f 7 7 7 f f f f f f f f f f f f f f f f f f f f f 
@@ -775,18 +775,18 @@ b b b b b b b b b b b b b b b b
         scene.setTile(9, img`
 d d d d d d d d d d d d d d b c 
 d d d d d d d d d d d d d d b c 
-c c b c c b c c b c c b c c b c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c b d c b d c b d c b d c b d c 
-c c b c c b c c b c c b c c b c 
+d d b d d b d d b d d b d d b c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d d d d d d d d d d d d d d c 
+d d b d d b d d b d d b d d b c 
 d d d d d d d d d d d d d d b c 
 d d d d d d d d d d d d d d b c 
 `, true)
@@ -827,22 +827,22 @@ c c c c c c c b c c c c c c c c
 c c c c c c c c c c c c c c c c 
 `, false)
         scene.setTile(8, img`
-a c c c c c c c c c c c c c c c 
-c d d d d b d d d d b c d d b b 
-c d d d d b d d d d b c d d b b 
-a b b b b c b b b b b c d d b b 
-c c f f f f f f f f f c d d b b 
-c c c f f f f f f f f c d d b b 
-c c c f f f f f f f f c d d b b 
-c f c f f f f f f f f c d d b b 
-c f f f f f f f f f f c d d b b 
-c c f c f f f f f f f c d d b b 
-c c f c f f f f f f f c d d b b 
-c c f f f f f f f f f c d d b b 
-a b b b b c b b b b b c d d b b 
-c d d d d b d d d d b c d d b b 
-c d d d d b d d d d b c d d b b 
-a c c c c c c c c c c c c c c c 
+a f f f f f f f f f f f f f f f 
+c d d d d f d d d d f f d d e e 
+c d d d d f d d d d f f d d e e 
+a f f f f c f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+f f f f f f f f f f f f d d e e 
+a f f f f c f f f f f f d d e e 
+c d d d d f d d d d f f d d e e 
+c d d d d f d d d d f f d d e e 
+a f f f f f f f f f f f f f f f 
 `, true)
         for (let value22 of scene.getTilesByType(5)) {
             enemyghost = sprites.create(img`
@@ -850,22 +850,22 @@ a c c c c c c c c c c c c c c c
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . f f f f . . . . . . . . . . 
-. . . . . . . . f f 1 1 1 1 f f . . . . . . . . 
-. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
-. . . . . . . f 1 1 1 1 1 1 1 1 f . . . . . . . 
-. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
-. . . . . . f d 1 1 1 1 1 1 1 1 d f . . . . . . 
-. . . . . . f d d d 1 1 1 1 d d d f . . . . . . 
-. . . . . . f b d b f d d f b d b f . . . . . . 
-. . . . . . f c d c f 1 1 f c d c f . . . . . . 
-. . . . . . . f b 1 1 1 1 1 1 b f . . . . . . . 
-. . . . . . f f f c d b 1 b d f f f f . . . . . 
-. . . . f c 1 1 1 c b f b f c 1 1 1 c f . . . . 
-. . . . f 1 b 1 b 1 f f f f 1 b 1 b 1 f . . . . 
-. . . . f b f b f f f f f f b f b f b f . . . . 
-. . . . . . . . . f f f f f f . . . . . . . . . 
-. . . . . . . . . . . f f f . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . f . . . . . . . f . . . . . . 
+. . . . . . . . f f f f f f f f f f f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 f 2 2 2 f 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 f f f 2 2 2 f . . . . . 
+. . . . . . . . f 2 2 2 2 2 2 2 2 2 f . . . . . 
+. . . . . . . . f f f f f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -962,10 +962,10 @@ f f f f f f f f f f f f f f f . . 7 7 7 7 f . . . . 3 . . . 7 7 7 7 7 7 7 7 7 7 
 f f f f f f f f f f f f f f f . . 7 7 7 7 7 7 7 7 f f f f f f f 7 7 f f f f f 7 7 7 f . . f f f 7 . . f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f . . 7 f f f f f f f f 7 f 3 . . b 7 7 b . . . 3 f f f f . . f f f 7 . b f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f . . . . . . . . . 3 f f f . . . . 7 7 b . . . 6 f f f f . . f 7 7 7 . . f f f f f f f f f f f f f 
-f f f f f f f f f f f f f f f b b b b b b b b b b 1 1 . . . . . 7 7 b . . . 6 f f f f . . . . . . . . f f f f f f f f f f f f f 
-f f f f f f f f f f f f f f f 5 5 5 5 5 5 5 5 5 5 1 1 . . . . . 7 7 . . . . 6 f f f f . . . . . . . . f f f f f f f f f f f f f 
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f 1 1 1 1 7 7 1 1 1 1 f f f f f f f f f f f f f f f f f f f f f f f f f f 
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f . . . . . . . . . . f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f . . . . . . . . . . 1 1 . . . . . 7 7 b . . . 6 f f f f . . . . . . . . f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . 7 7 . . . . 6 f f f f . . . . . . . . f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f b b b b b b b b b b f f f 1 1 1 1 7 7 1 1 1 1 f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f 5 5 5 5 5 5 5 5 5 5 f f f . . . . . . . . . . f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f . . . . . . . . . . f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f 8 8 8 8 8 8 8 8 8 8 f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
@@ -1222,21 +1222,21 @@ b b b b b b b b b b b b b b b b
 b b b b b b b b b b b b b b b b 
 `, true)
         scene.setTile(14, img`
-e 3 3 3 3 3 3 3 3 3 3 3 3 3 3 e 
-e 4 4 4 4 4 4 4 4 4 4 4 4 4 4 e 
+e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e 
 e e e e e e e e e e e e e e e e 
 e 4 e 4 4 4 4 4 4 4 4 4 4 e 4 e 
 e 4 e e e e e e e e e e e e 4 e 
-e 4 e 3 3 3 3 3 3 3 3 3 3 e 4 e 
+e 4 e e e e e e e e e e e e 4 e 
 e 4 e 4 4 4 4 4 4 4 4 4 4 e 4 e 
 e 4 e e e e e e e e e e e e 4 e 
-e 4 e 3 3 3 3 3 3 3 3 3 3 e 4 e 
+e 4 e e e e e e e e e e e e 4 e 
 e 4 e 4 4 4 4 4 4 4 4 4 4 e 4 e 
-e 3 3 3 3 3 3 3 3 3 3 3 3 3 3 e 
-e 4 4 4 4 4 4 4 4 4 4 4 4 4 4 e 
 e e e e e e e e e e e e e e e e 
-e e c c c c c c c c c c c c e e 
-e e c c c c c c c c c c c c e e 
+e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e 
 e e e e e e e e e e e e e e e e 
 `, true)
         scene.setTile(9, img`
@@ -1773,6 +1773,7 @@ guntype = 1
 game.onUpdate(function () {
     if (level == 3) {
         if (info.player3.score() <= 0) {
+            game.splash("the lower the score, the better")
             game.over(true)
         }
     }
@@ -1787,7 +1788,9 @@ game.onUpdateInterval(Math.randomRange(5000, 10000), function () {
     }
 })
 game.onUpdateInterval(1000, function () {
-    info.changeScoreBy(1)
+    if (level == 2) {
+        info.changeScoreBy(1)
+    }
 })
 game.onUpdateInterval(1000, function () {
     if (level == 3) {
