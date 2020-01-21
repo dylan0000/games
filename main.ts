@@ -108,15 +108,6 @@ function sprite () {
     controller.moveSprite(mySprite)
     scene.cameraFollowSprite(mySprite)
 }
-function life_and_numbersstart () {
-    game.showLongText("tutorial right, start game up", DialogLayout.Bottom)
-    game.showLongText("check tutorial for instructions", DialogLayout.Bottom)
-    game.showLongText("game by dylan", DialogLayout.Bottom)
-    level = 0
-    info.setLife(5)
-    info.player4.setScore(20)
-    guntype = 1
-}
 function buttonpress () {
     if (level == 1) {
         scene.setTile(2, img`
@@ -580,9 +571,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite2, ot
     otherSprite.destroy(effects.fire, 50)
     sprite2.destroy()
     scene.cameraShake(3, 200)
-    if (level == 2) {
-        info.player2.changeScoreBy(1)
-    }
+    info.player2.changeScoreBy(1)
 })
 // upgrading gun
 scene.onHitTile(SpriteKind.Player, 10, function (sprite2) {
@@ -711,9 +700,10 @@ function levels () {
         game.splash("Controls", "Keyboard X to rotate direction")
         game.splash("Space bar to shoot", "Arrow keys to move")
         game.splash("shoot to activate buttons", "ammo displayed bottom right")
+        game.splash("enemies killed displayed top right", "time displayed top left.  only shown out of tutorial")
         sprite()
         scene.setTileMap(img`
-f 3 f f f f 7 7 7 f f f f f f f f f f f f f f f f f f f f f 
+f 3 f f f 3 7 7 7 f f f f f f f f f f f f f f f f f f f f f 
 f 1 1 1 1 1 f 7 f 1 1 1 1 1 9 5 1 1 5 1 1 1 1 1 1 1 1 1 1 f 
 f 1 1 1 2 1 f 7 f 1 1 1 1 1 9 1 1 5 1 1 1 1 1 1 1 1 1 1 1 f 
 f 1 1 1 1 1 f 7 f 1 1 1 1 1 9 1 5 1 1 1 1 1 1 1 1 1 1 b b f 
@@ -723,7 +713,7 @@ f 1 1 1 1 1 1 9 1 1 1 1 1 1 9 1 1 5 1 1 1 3 3 1 1 1 8 b b f
 f 1 1 1 1 1 f 7 f 1 1 1 1 1 9 5 1 1 5 1 1 1 1 1 1 1 b b b f 
 f 1 1 1 1 1 f 7 f 1 1 1 1 1 9 1 5 1 1 1 1 1 1 1 1 1 1 b b f 
 f 1 1 1 1 1 f 7 f 1 1 1 1 1 9 1 1 5 1 1 1 1 1 1 1 1 1 1 1 f 
-f 3 1 1 1 1 f 7 f 1 1 1 1 1 9 5 1 1 5 1 1 1 1 1 1 1 1 1 1 f 
+f 3 1 1 1 3 f 7 f 1 1 1 1 1 9 5 1 1 5 1 1 1 1 1 1 1 1 1 1 f 
 f f f f f f 7 7 7 f f f f f f f f f f f f f f f f f f f f f 
 `)
         scene.setTile(7, img`
@@ -979,9 +969,9 @@ f f f f f f f f f f f f f f f f f f f 7 . . f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f 7 . . f f f f f f f f f f f f f f f f f f f f f f f f f f f 7 7 7 7 7 7 f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f 7 . . f f f f f f f f f f f f f f f f f f f f f f f f f f f f 7 7 7 7 7 f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f c c c . . . . . . b . . . b f f f f f f f f f f f f f f f f f 7 7 7 7 f f f f f f f f f f 
-f f f f f f f f f f f f f f f f f f f c c c b . . . b . . b . . . f f f f f f f f f f f f f f f f f f 7 7 f f f f f f f f f f f 
-f f f f f f f f f f f f f f f f f f f b . . . . . . . . . . . . b f f f f f f f f f . 2 . . . . . . . 3 3 f f f f f f f f f f f 
-f f f f f f f f f f f f f f f 3 . 1 1 . . . . . . . b . . . b . . f f f f f f f f f b . . . b . b . b 3 3 f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f c c c b . . . b . . . . . . f f f f f f f f f f f f f f f f f f 7 7 f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f b . . . . b . . . . . . . b f f f f f f f f f . 2 . . . . . . . 3 3 f f f f f f f f f f f 
+f f f f f f f f f f f f f f f 3 . 1 1 . . . b . . . b . b . b . . f f f f f f f f f b . b . b . b . b 3 3 f f f f f f f f f f f 
 f f f f f f f f f f f f f f f 3 . 1 1 . b . . b . . . . . . . . . . 4 4 4 4 4 4 4 . . . . . . . . . . f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f . . 7 f f . . . . . . . . . . . . . . 4 4 4 4 4 4 4 . . b . b . b . b . f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f . . 7 7 f 3 . . . . . . . . . . . 3 f f f f f f f f f . . . . . . . . . f f f f f f f f f f f f f 
@@ -1486,14 +1476,24 @@ scene.onHitTile(SpriteKind.Player, 7, function (sprite2) {
         levels()
     }
     if (level == 2) {
+        game.over(false)
         info.changeLifeBy(-1)
         level = 2
         enemyghost.destroy()
         sprite()
         tiles.placeOnTile(mySprite, tiles.getTileLocation(12, 17))
-        game.over(false)
     }
 })
+function life_and_numbersstart () {
+    game.showLongText("tutorial right, start game up", DialogLayout.Bottom)
+    game.showLongText("check tutorial for instructions", DialogLayout.Bottom)
+    game.showLongText("game by dylan", DialogLayout.Bottom)
+    level = 0
+    info.setLife(5)
+    info.player4.setScore(20)
+    info.player2.setScore(0)
+    guntype = 1
+}
 // speed boosting on boss level
 info.onCountdownEnd(function () {
     if (off == 0) {
@@ -1789,6 +1789,7 @@ b b b b b b b b b b b b b b b b
     }
 })
 let bullet: Sprite = null
+let guntype = 0
 let shop: Sprite = null
 let on = 0
 let off = 0
@@ -1797,7 +1798,6 @@ let heart: Sprite = null
 let bulletdirection = 0
 let bulletvelocity = 0
 let boss2: Sprite = null
-let guntype = 0
 let mySprite: Sprite = null
 let enemyghost: Sprite = null
 let level = 0
