@@ -108,6 +108,183 @@ function sprite () {
     controller.moveSprite(mySprite)
     scene.cameraFollowSprite(mySprite)
 }
+function directions () {
+    if (bulletvelocity == 0 && bulletdirection == 0) {
+        bulletvelocity = 0
+        bulletdirection = -200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 5 5 5 5 5 . . . . . 
+. . . . . 5 5 5 5 5 5 5 . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletvelocity == 0 && bulletdirection == -200) {
+        bulletvelocity = -200
+        bulletdirection = 0
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 f 1 1 1 f 1 1 f . . 
+. . . 5 5 1 f 1 1 1 f 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 f 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletvelocity == -200 && bulletdirection == 0) {
+        bulletvelocity = 0
+        bulletdirection = 200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 5 5 5 5 5 5 5 5 5 f . . 
+. . . . 5 . 5 . 5 . 5 . 5 . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletvelocity == 0 && bulletdirection == 200) {
+        bulletvelocity = 200
+        bulletdirection = 0
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 5 5 . . 
+. . . f 1 1 f 1 1 1 f 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 f 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletvelocity == 200 && bulletdirection == 0) {
+        bulletvelocity = 0
+        bulletdirection = -200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 5 5 5 5 5 . . . . . 
+. . . . . 5 5 5 5 5 5 5 . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    }
+}
+function shoot () {
+    if (guntype == 1) {
+        if (info.player4.score() > 0) {
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletvelocity, bulletdirection)
+            info.player4.changeScoreBy(-1)
+        } else {
+            mySprite.say("no ammo", 500)
+        }
+    } else if (guntype == 2) {
+        if (info.player4.score() > 0) {
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletvelocity + 20, bulletdirection - 20)
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletvelocity - 20, bulletdirection + 20)
+            info.player4.changeScoreBy(-1)
+        } else {
+            mySprite.say("no ammo", 500)
+        }
+    }
+}
 function buttonpress () {
     if (level == 1) {
         scene.setTile(2, img`
@@ -222,112 +399,7 @@ b b b b b b b b b b b b b b b b
 })
 // this is not for shooting this is for aiming
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (bulletvelocity == 0 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = -200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 5 5 5 5 5 . . . . . 
-. . . . . 5 5 5 5 5 5 5 . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 0 && bulletdirection == -200) {
-        bulletvelocity = -200
-        bulletdirection = 0
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 f 1 1 1 f 1 1 f . . 
-. . . 5 5 1 f 1 1 1 f 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 f 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == -200 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = 200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 5 5 5 5 5 5 5 5 5 f . . 
-. . . . 5 . 5 . 5 . 5 . 5 . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 0 && bulletdirection == 200) {
-        bulletvelocity = 200
-        bulletdirection = 0
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 5 5 . . 
-. . . f 1 1 f 1 1 1 f 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 f 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 200 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = -200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 5 5 5 5 5 . . . . . 
-. . . . . 5 5 5 5 5 5 5 . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    }
+    directions()
 })
 scene.onHitTile(SpriteKind.Player, 12, function (sprite2) {
     if (level == 0) {
@@ -609,73 +681,7 @@ scene.onHitTile(SpriteKind.Player, 10, function (sprite2) {
 })
 // player shooting projectile
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (guntype == 1) {
-        if (info.player4.score() > 0) {
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity, bulletdirection)
-            info.player4.changeScoreBy(-1)
-        } else {
-            mySprite.say("no ammo", 500)
-        }
-    } else if (guntype == 2) {
-        if (info.player4.score() > 0) {
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity + 20, bulletdirection - 20)
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity - 20, bulletdirection + 20)
-            info.player4.changeScoreBy(-1)
-        } else {
-            mySprite.say("no ammo", 500)
-        }
-    }
+    shoot()
 })
 // extra effects for projectile collisions
 scene.onHitWall(SpriteKind.Projectile, function (sprite2) {
@@ -1788,16 +1794,16 @@ b b b b b b b b b b b b b b b b
 `, false)
     }
 })
-let bullet: Sprite = null
-let guntype = 0
 let shop: Sprite = null
 let on = 0
 let off = 0
 let ammo: Sprite = null
 let heart: Sprite = null
+let boss2: Sprite = null
+let bullet: Sprite = null
+let guntype = 0
 let bulletdirection = 0
 let bulletvelocity = 0
-let boss2: Sprite = null
 let mySprite: Sprite = null
 let enemyghost: Sprite = null
 let level = 0
