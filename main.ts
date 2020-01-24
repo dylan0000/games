@@ -85,6 +85,115 @@ c c c c c c c c c c c c c c c c
         tiles.placeOnTile(mySprite, tiles.getTileLocation(39, 18))
     }
 })
+// direction
+function directions () {
+    if (bulletX == 0 && bulletY == 0) {
+        bulletX = 0
+        bulletY = -200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 5 5 5 5 5 . . . . . 
+. . . . . 5 5 5 5 5 5 5 . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletX == 0 && bulletY == -200) {
+        bulletX = -200
+        bulletY = 0
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 f 1 1 1 f 1 1 f . . 
+. . . 5 5 1 f 1 1 1 f 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 f 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . 5 5 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletX == -200 && bulletY == 0) {
+        bulletX = 0
+        bulletY = 200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 5 5 5 5 5 5 5 5 5 f . . 
+. . . . 5 . 5 . 5 . 5 . 5 . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletX == 0 && bulletY == 200) {
+        bulletX = 200
+        bulletY = 0
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . f 1 1 1 1 1 f . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 5 5 . . 
+. . . f 1 1 f 1 1 1 f 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 f 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 1 1 1 1 1 1 1 5 5 . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    } else if (bulletX == 200 && bulletY == 0) {
+        bulletX = 0
+        bulletY = -200
+        mySprite.setImage(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 5 5 5 5 5 . . . . . 
+. . . . . 5 5 5 5 5 5 5 . . . . 
+. . . . f 1 1 1 1 1 1 1 f . . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 f 1 1 1 f 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 f 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 1 1 f . . 
+. . . f 1 f 1 f 1 f 1 f 1 f . . 
+. . . . f . f . f . f . f . . . 
+. . . . . . . . . . . . . . . . 
+`)
+    }
+}
 // creates sprite
 function sprite () {
     mySprite = sprites.create(img`
@@ -107,183 +216,6 @@ function sprite () {
 `, SpriteKind.Player)
     controller.moveSprite(mySprite)
     scene.cameraFollowSprite(mySprite)
-}
-function directions () {
-    if (bulletvelocity == 0 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = -200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 5 5 5 5 5 . . . . . 
-. . . . . 5 5 5 5 5 5 5 . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 0 && bulletdirection == -200) {
-        bulletvelocity = -200
-        bulletdirection = 0
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 f 1 1 1 f 1 1 f . . 
-. . . 5 5 1 f 1 1 1 f 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 f 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . 5 5 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == -200 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = 200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 5 5 5 5 5 5 5 5 5 f . . 
-. . . . 5 . 5 . 5 . 5 . 5 . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 0 && bulletdirection == 200) {
-        bulletvelocity = 200
-        bulletdirection = 0
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 1 1 1 1 1 f . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 5 5 . . 
-. . . f 1 1 f 1 1 1 f 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 f 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 1 1 1 1 1 1 1 5 5 . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    } else if (bulletvelocity == 200 && bulletdirection == 0) {
-        bulletvelocity = 0
-        bulletdirection = -200
-        mySprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 5 5 5 5 5 . . . . . 
-. . . . . 5 5 5 5 5 5 5 . . . . 
-. . . . f 1 1 1 1 1 1 1 f . . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 f 1 1 1 f 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 f 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 1 1 1 1 1 1 1 1 f . . 
-. . . f 1 f 1 f 1 f 1 f 1 f . . 
-. . . . f . f . f . f . f . . . 
-. . . . . . . . . . . . . . . . 
-`)
-    }
-}
-function shoot () {
-    if (guntype == 1) {
-        if (info.player4.score() > 0) {
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity, bulletdirection)
-            info.player4.changeScoreBy(-1)
-        } else {
-            mySprite.say("no ammo", 500)
-        }
-    } else if (guntype == 2) {
-        if (info.player4.score() > 0) {
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity + 20, bulletdirection - 20)
-            bullet = sprites.createProjectileFromSprite(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . f 2 2 2 2 2 2 f . . . . 
-. . . . . f 2 2 2 2 f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`, mySprite, bulletvelocity - 20, bulletdirection + 20)
-            info.player4.changeScoreBy(-1)
-        } else {
-            mySprite.say("no ammo", 500)
-        }
-    }
 }
 function buttonpress () {
     if (level == 1) {
@@ -683,6 +615,76 @@ scene.onHitTile(SpriteKind.Player, 10, function (sprite2) {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     shoot()
 })
+// shoots
+function shoot () {
+    if (guntype == 1) {
+        if (info.player4.score() > 0) {
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletX, bulletY)
+            info.player4.changeScoreBy(-1)
+        } else {
+            mySprite.say("no ammo", 500)
+        }
+    } else if (guntype == 2) {
+        if (info.player4.score() > 0) {
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletX + 20, bulletY - 20)
+            bullet = sprites.createProjectileFromSprite(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . f 2 2 2 2 2 2 f . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, mySprite, bulletX - 20, bulletY + 20)
+            info.player4.changeScoreBy(-1)
+        } else {
+            mySprite.say("no ammo", 500)
+        }
+    }
+}
 // extra effects for projectile collisions
 scene.onHitWall(SpriteKind.Projectile, function (sprite2) {
     sprite2.destroy(effects.fire, 50)
@@ -1491,6 +1493,7 @@ scene.onHitTile(SpriteKind.Player, 7, function (sprite2) {
     }
 })
 function life_and_numbersstart () {
+    game.splash("Go right for instructions")
     game.showLongText("tutorial right, start game up", DialogLayout.Bottom)
     game.showLongText("check tutorial for instructions", DialogLayout.Bottom)
     game.showLongText("game by dylan", DialogLayout.Bottom)
@@ -1688,7 +1691,8 @@ scene.onHitTile(SpriteKind.Projectile, 10, function (sprite2) {
 })
 // the horde spawning
 scene.onHitTile(SpriteKind.Projectile, 12, function (sprite2) {
-    scene.setTile(12, img`
+    if (level == 2) {
+        scene.setTile(12, img`
 b d d d d d d d d d d d d d d c 
 d b b b b b b b b b b b b b b c 
 d b b b b b b b b b b b b b b c 
@@ -1706,9 +1710,9 @@ d b b b b b b b b b b b b b b c
 d b b b b b b b b b b b b b b c 
 c c c c c c c c c c c c c c c a 
 `, false)
-    for (let index = 0; index < 2; index++) {
-        for (let value7 of scene.getTilesByType(11)) {
-            enemyghost = sprites.create(img`
+        for (let index = 0; index < 2; index++) {
+            for (let value7 of scene.getTilesByType(11)) {
+                enemyghost = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -1734,12 +1738,13 @@ c c c c c c c c c c c c c c c a
 . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Enemy)
-            enemyghost.follow(mySprite, 40)
-            enemyghost.setFlag(SpriteFlag.BounceOnWall, true)
-            scene.place(value7, enemyghost)
+                enemyghost.follow(mySprite, 40)
+                enemyghost.setFlag(SpriteFlag.BounceOnWall, true)
+                scene.place(value7, enemyghost)
+            }
         }
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(24, 49))
     }
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(24, 49))
 })
 // adds hp to player
 sprites.onOverlap(SpriteKind.Player, SpriteKind.hp, function (sprite2, otherSprite) {
@@ -1794,16 +1799,16 @@ b b b b b b b b b b b b b b b b
 `, false)
     }
 })
+let bullet: Sprite = null
+let guntype = 0
 let shop: Sprite = null
 let on = 0
 let off = 0
 let ammo: Sprite = null
 let heart: Sprite = null
 let boss2: Sprite = null
-let bullet: Sprite = null
-let guntype = 0
-let bulletdirection = 0
-let bulletvelocity = 0
+let bulletY = 0
+let bulletX = 0
 let mySprite: Sprite = null
 let enemyghost: Sprite = null
 let level = 0
